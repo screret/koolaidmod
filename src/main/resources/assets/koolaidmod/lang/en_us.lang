@@ -1,0 +1,12 @@
+# Creative Tabs
+itemGroup.kool-aid mod=Kool-Aid mod
+
+#items
+item.koolaidmod.kool_aid.name=Kool-Aid
+item.koolaidmod.juice_helmet.name=Juice Helmet
+item.koolaidmod.juice_chestplate.name=Juice Chestplate
+item.koolaidmod.juice_leggings.name=Juice Leggings
+item.koolaidmod.juice_boots.name=Juice Boots
+
+#blocks
+tile.koolaidmod.test_block.name=test block
