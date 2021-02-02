@@ -2,6 +2,7 @@ package koolaid.mod.handlers;
 
 import koolaid.mod.Base;
 import koolaid.mod.blocks.test_block;
+import koolaid.mod.handlers.client.ModelRegistrationHandler;
 import koolaid.mod.init.ModBlocks;
 import koolaid.mod.init.ModItems;
 import koolaid.mod.util.RegistryUtil;
@@ -39,6 +40,8 @@ public class RegistryHandler {
         };
         event.getRegistry().registerAll(items);
         event.getRegistry().registerAll(itemBlocks);
+        new ModelRegistrationHandler().registerItemModels(items);
+        new ModelRegistrationHandler().registerItemModels(itemBlocks);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
