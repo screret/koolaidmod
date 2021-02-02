@@ -26,7 +26,7 @@ public class RegistryHandler {
 
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGH)
+    @SubscribeEvent
     public static void registerItems(@NotNull final RegistryEvent.Register<Item> event){
         final Item[] items = {
                 RegistryUtil.setItemName(ModItems.KOOL_AID, "kool_aid").setCreativeTab(Base.MOD_TAB),
@@ -44,7 +44,7 @@ public class RegistryHandler {
         new ModelRegistrationHandler().registerItemModels(itemBlocks);
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    @SubscribeEvent
     public static void registerBlocks(@NotNull final RegistryEvent.Register<Block> event){
         final Block[] blocks = {
                 RegistryUtil.setBlockName(new test_block(Material.ROCK), "test_block").setCreativeTab(Base.MOD_TAB),
