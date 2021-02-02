@@ -40,8 +40,6 @@ public class RegistryHandler {
         };
         event.getRegistry().registerAll(items);
         event.getRegistry().registerAll(itemBlocks);
-        new ModelRegistrationHandler().registerItemModels(items);
-        new ModelRegistrationHandler().registerItemModels(itemBlocks);
     }
 
     @SubscribeEvent
