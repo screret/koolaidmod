@@ -10,6 +10,7 @@ import koolaidmod.materials.ModMaterials;
 import koolaidmod.util.RegistryUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -24,12 +25,12 @@ import java.util.logging.Logger;
 @Mod.EventBusSubscriber(modid = Base.MODID)
 public class RegistryHandler {
 
-    Logger logger = Logger.getLogger(Base.MODID);
-
     @SubscribeEvent
-    public void registerBlocks(final RegistryEvent.Register<Block> event){
+    public static void registerBlocks(final RegistryEvent.Register<Block> event){
+        Logger logger = Logger.getLogger(Base.MODID);
+
         final Block[] blocks = {
-                RegistryUtil.setBlockName(new test_block(Material.ROCK), "test_block").setCreativeTab(Base.MOD_TAB),
+                RegistryUtil.setBlockName(new test_block(Material.ROCK), "test_block").setCreativeTab(Base.MOD_TAB).setCreativeTab(CreativeTabs.SEARCH),
         };
         event.getRegistry().registerAll(blocks);
         for(Block block : blocks)
@@ -37,14 +38,15 @@ public class RegistryHandler {
     }
 
     @SubscribeEvent
-    public void registerItems(final RegistryEvent.Register<Item> event){
+    public static void registerItems(final RegistryEvent.Register<Item> event){
+        Logger logger = Logger.getLogger(Base.MODID);
         final Item[] items = {
                 RegistryUtil.setItemName(new Item(), "kool_aid").setCreativeTab(Base.MOD_TAB),
 
-                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.HEAD), "juice_helmet").setCreativeTab(Base.MOD_TAB),
-                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.CHEST), "juice_chestplate").setCreativeTab(Base.MOD_TAB),
-                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.LEGS), "juice_leggings").setCreativeTab(Base.MOD_TAB),
-                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.FEET), "juice_boots").setCreativeTab(Base.MOD_TAB),
+                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.HEAD), "juice_helmet").setCreativeTab(Base.MOD_TAB).setCreativeTab(CreativeTabs.SEARCH),
+                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.CHEST), "juice_chestplate").setCreativeTab(Base.MOD_TAB).setCreativeTab(CreativeTabs.SEARCH),
+                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.LEGS), "juice_leggings").setCreativeTab(Base.MOD_TAB).setCreativeTab(CreativeTabs.SEARCH),
+                RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.FEET), "juice_boots").setCreativeTab(Base.MOD_TAB).setCreativeTab(CreativeTabs.SEARCH),
         };
         final Item[] itemBlocks = {
                 new ItemBlock(ModBlocks.TEST_BLOCK).setRegistryName(ModBlocks.TEST_BLOCK.getRegistryName())
