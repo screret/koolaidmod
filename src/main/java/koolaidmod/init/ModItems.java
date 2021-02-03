@@ -2,8 +2,6 @@ package koolaidmod.init;
 
 import koolaidmod.Base;
 import koolaidmod.items.armor.ModArmor;
-import koolaidmod.materials.ModMaterials;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -14,8 +12,8 @@ public class ModItems {
         public static final Item KOOL_AID               = null;
 
         //armor
-        public static final Item JUICE_HELMET           = null;
-        public static final Item JUICE_CHESTPLATE       = null;
-        public static final Item JUICE_LEGGINGS         = null;
-        public static final Item JUICE_BOOTS            = null;
+        public static final ModArmor JUICE_HELMET           = null;
+        public static final ModArmor JUICE_CHESTPLATE       = null;
+        public static final ModArmor JUICE_LEGGINGS         = null;
+        public static final ModArmor JUICE_BOOTS            = null;
 }
