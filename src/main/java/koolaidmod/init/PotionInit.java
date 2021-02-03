@@ -1,7 +1,7 @@
-package koolaid.mod.init;
+package koolaidmod.init;
 
-import koolaid.mod.Base;
-import koolaid.mod.potions.CustomPotion;
+import koolaidmod.Base;
+import koolaidmod.potions.CustomPotion;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
@@ -10,9 +10,9 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
-
+@GameRegistry.ObjectHolder(Base.MODID)
 public class PotionInit {
     public PotionInit(){super();}
     public static final Potion KoolAid = new CustomPotion("Kool_Aid", false, 5, 0, 0).registerPotionAttributeModifier(SharedMonsterAttributes.ATTACK_SPEED, MathHelper.getRandomUUID().toString(), 2d, 0);

@@ -1,6 +1,6 @@
-package koolaid.mod.potions;
+package koolaidmod.potions;
 
-import koolaid.mod.Base;
+import koolaidmod.Base;
 import net.minecraft.client.Minecraft;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;

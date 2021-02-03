@@ -1,6 +1,6 @@
-package koolaid.mod;
+package koolaidmod;
 
-import koolaid.mod.creativeTabs.ModCreativeTabs;
+import koolaidmod.creativeTabs.ModCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

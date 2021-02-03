@@ -1,8 +1,8 @@
-package koolaid.mod.init;
+package koolaidmod.init;
 
-import koolaid.mod.Base;
-import koolaid.mod.items.armor.ModArmor;
-import koolaid.mod.materials.ModMaterials;
+import koolaidmod.Base;
+import koolaidmod.items.armor.ModArmor;
+import koolaidmod.materials.ModMaterials;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;

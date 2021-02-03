@@ -1,4 +1,4 @@
-package koolaid.mod.items.armor;
+package koolaidmod.items.armor;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;

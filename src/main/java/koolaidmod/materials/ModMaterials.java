@@ -1,6 +1,6 @@
-package koolaid.mod.materials;
+package koolaidmod.materials;
 
-import koolaid.mod.Base;
+import koolaidmod.Base;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;

@@ -1,8 +1,7 @@
-package koolaid.mod.creativeTabs;
+package koolaidmod.creativeTabs;
 
-import koolaid.mod.init.ModItems;
+import koolaidmod.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class ModCreativeTabs extends CreativeTabs

@@ -1,7 +1,7 @@
-package koolaid.mod.init;
+package koolaidmod.init;
 
-import koolaid.mod.Base;
-import koolaid.mod.blocks.test_block;
+import koolaidmod.Base;
+import koolaidmod.blocks.test_block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

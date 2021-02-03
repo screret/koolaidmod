@@ -1,6 +1,6 @@
-package koolaid.mod.blocks;
+package koolaidmod.blocks;
 
-import koolaid.mod.Base;
+import koolaidmod.Base;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
