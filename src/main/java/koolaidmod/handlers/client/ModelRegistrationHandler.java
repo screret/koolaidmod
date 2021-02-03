@@ -28,13 +28,7 @@ public class ModelRegistrationHandler {
     private static void registerModel(Item item, int meta) {
         final ModelResourceLocation fullModelLocation = new ModelResourceLocation(item.getRegistryName().toString(), "inventory");
         ModelBakery.registerItemVariants(item, fullModelLocation);
-        ModelLoader.setCustomMeshDefinition(item, new ItemMeshDefinition()
-        {
-            public ModelResourceLocation getModelLocation(ItemStack stack)
-            {
-                return fullModelLocation;
-            }
-        });
+        ModelLoader.setCustomMeshDefinition(item, stack -> fullModelLocation);
         System.out.println(fullModelLocation.toString());
         /*ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
         System.out.println(item.getRegistryName().toString());*/

@@ -1,6 +1,7 @@
 package koolaidmod;
 
 import koolaidmod.creativeTabs.ModCreativeTabs;
+import koolaidmod.init.PotionInit;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -35,9 +36,7 @@ public class Base {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        //ModItems.init();
-        //ModBlocks.init();
-        //PotionInit.registerPotion();
+        PotionInit.registerPotion();
     }
 
     /**
