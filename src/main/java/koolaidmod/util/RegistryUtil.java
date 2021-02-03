@@ -4,7 +4,6 @@ import koolaidmod.Base;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
-import org.jetbrains.annotations.NotNull;
 
 @Mod.EventBusSubscriber
 public class RegistryUtil {

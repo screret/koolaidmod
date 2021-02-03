@@ -18,7 +18,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Logger;
 
@@ -28,7 +27,7 @@ public class RegistryHandler {
     Logger logger = Logger.getLogger(Base.MODID);
 
     @SubscribeEvent
-    public void registerBlocks(@NotNull final RegistryEvent.Register<Block> event){
+    public void registerBlocks(final RegistryEvent.Register<Block> event){
         final Block[] blocks = {
                 RegistryUtil.setBlockName(new test_block(Material.ROCK), "test_block").setCreativeTab(Base.MOD_TAB),
         };
@@ -38,7 +37,7 @@ public class RegistryHandler {
     }
 
     @SubscribeEvent
-    public void registerItems(@NotNull final RegistryEvent.Register<Item> event){
+    public void registerItems(final RegistryEvent.Register<Item> event){
         final Item[] items = {
                 RegistryUtil.setItemName(new Item(), "kool_aid").setCreativeTab(Base.MOD_TAB),
 

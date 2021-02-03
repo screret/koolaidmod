@@ -36,7 +36,7 @@ public class Base {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        PotionInit.registerPotion();
+        //PotionInit.registerPotion();
     }
 
     /**

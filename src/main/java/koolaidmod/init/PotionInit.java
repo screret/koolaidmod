@@ -13,12 +13,12 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@GameRegistry.ObjectHolder(Base.MODID)
+//@GameRegistry.ObjectHolder(Base.MODID)
 public class PotionInit {
     public PotionInit(){super();}
     public static final Potion KoolAid = new CustomPotion("Kool_Aid", false, 5, 0, 0).registerPotionAttributeModifier(SharedMonsterAttributes.ATTACK_SPEED, MathHelper.getRandomUUID().toString(), 2d, 0);
-    public static final PotionType KoolAidPot = new PotionType("KoolAid", new PotionEffect(new PotionEffect(KoolAid, 2400)));
-    public static final PotionType Long_KoolAidPot = new PotionType("long_KoolAid", new PotionEffect(new PotionEffect(KoolAid, 4800)));
+    public static final PotionType KoolAidPot = new PotionType("KoolAid", new PotionEffect(KoolAid, 2400));
+    public static final PotionType Long_KoolAidPot = new PotionType("long_KoolAid", new PotionEffect(KoolAid, 4800));
 
     public static void registerPotion(){
         registerPotions(KoolAidPot, Long_KoolAidPot, KoolAid);

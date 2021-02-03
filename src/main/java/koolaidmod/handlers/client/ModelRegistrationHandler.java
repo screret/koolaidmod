@@ -19,6 +19,7 @@ public class ModelRegistrationHandler {
     @SubscribeEvent
     public void registerModels(final ModelRegistryEvent event) {
         registerModel(ModItems.KOOL_AID, 0);
+
         registerModel(ModItems.JUICE_HELMET, 0);
         registerModel(ModItems.JUICE_CHESTPLATE, 0);
         registerModel(ModItems.JUICE_LEGGINGS, 0);
@@ -26,13 +27,6 @@ public class ModelRegistrationHandler {
     }
 
     private static void registerModel(Item item, int meta) {
-        final ModelResourceLocation fullModelLocation = new ModelResourceLocation(item.getRegistryName().toString(), "inventory");
-        ModelBakery.registerItemVariants(item, fullModelLocation);
-        ModelLoader.setCustomMeshDefinition(item, stack -> fullModelLocation);
-        System.out.println(fullModelLocation.toString());
-        /*ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-        System.out.println(item.getRegistryName().toString());*/
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
-
-
 }

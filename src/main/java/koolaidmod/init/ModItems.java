@@ -11,11 +11,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
 
         //normies
-        public static final Item KOOL_AID              = new Item();
+        public static final Item KOOL_AID               = null;
 
         //armor
-        public static final ModArmor JUICE_HELMET      = new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.HEAD);
-        public static final ModArmor JUICE_CHESTPLATE  = new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.CHEST);
-        public static final ModArmor JUICE_LEGGINGS    = new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.LEGS);
-        public static final ModArmor JUICE_BOOTS       = new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.FEET);
+        public static final Item JUICE_HELMET           = null;
+        public static final Item JUICE_CHESTPLATE       = null;
+        public static final Item JUICE_LEGGINGS         = null;
+        public static final Item JUICE_BOOTS            = null;
 }
