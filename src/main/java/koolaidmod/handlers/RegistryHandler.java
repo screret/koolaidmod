@@ -4,6 +4,7 @@ import koolaidmod.Base;
 import koolaidmod.blocks.test_block;
 import koolaidmod.init.ModBlocks;
 import koolaidmod.init.ModItems;
+import koolaidmod.init.PotionInit;
 import koolaidmod.items.armor.ModArmor;
 import koolaidmod.materials.ModMaterials;
 import koolaidmod.util.RegistryUtil;
@@ -47,6 +48,6 @@ public class RegistryHandler {
         };
         event.getRegistry().registerAll(items);
         event.getRegistry().registerAll(itemBlocks);
-        logger.warn(items[0].getRegistryName().toString() + " " +  ModItems.KOOL_AID.getRegistryName().toString());
+        //logger.warn(items[0].getRegistryName().toString() + " " +  ModItems.KOOL_AID.getRegistryName().toString());
     }
 }
