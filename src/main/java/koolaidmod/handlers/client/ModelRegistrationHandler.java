@@ -21,6 +21,7 @@ public class ModelRegistrationHandler {
     @SubscribeEvent(priority = EventPriority.NORMAL)
     public static void registerModels(@NotNull final ModelRegistryEvent event) {
         registerModel(ModItems.KOOL_AID, 0);
+        registerModel(ModItems.JELLO, 0);
 
         registerModel(ModItems.JUICE_HELMET, 0);
         registerModel(ModItems.JUICE_CHESTPLATE, 0);
@@ -31,9 +32,6 @@ public class ModelRegistrationHandler {
     }
 
     private static void registerModel(@NotNull Item item, int meta) {
-        if (item != null)
             ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
-        else
-            throw new IllegalArgumentException("object not registered");
     }
 }

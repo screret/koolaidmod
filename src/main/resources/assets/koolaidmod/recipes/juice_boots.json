@@ -1,0 +1,13 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "# #",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "koolaidmod:jello"
+        }
+    },
+    "result": {koolaidmod:juice_boots}
+}

@@ -10,6 +10,8 @@ public class ModItems {
         //normies
         @ObjectHolder("kool_aid")
         public static final Item KOOL_AID               = null;
+        @ObjectHolder("jello")
+        public static final Item JELLO                  = null;
 
         //armor
         @ObjectHolder("juice_helmet")
