@@ -37,6 +37,7 @@ public class RegistryHandler {
         Logger logger = LogManager.getLogger(Base.MODID);
         final Item[] items = {
                 RegistryUtil.setItemName(new Item(), "kool_aid").setCreativeTab(Base.MOD_TAB),
+                RegistryUtil.setItemName(new Item(), "jello").setCreativeTab(Base.MOD_TAB),
 
                 RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.HEAD), "juice_helmet").setCreativeTab(Base.MOD_TAB),
                 RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.CHEST), "juice_chestplate").setCreativeTab(Base.MOD_TAB),
