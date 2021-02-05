@@ -14,7 +14,7 @@
             "item": "minecraft:sugar"
         },
         {
-            "item": "minecraft:water_bucket"
+            "item": "minecraft:potion{Potion:water}"
         },
         {
             "item": "minecraft:sugar"
