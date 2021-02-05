@@ -29,5 +29,8 @@
             "item": "minecraft:sugar"
         }
     ],
-    "result": {koolaidmod:jello}
+    "result": {       
+        "item": "koolaidmod:jello",
+        "count": 1
+    }
 }
