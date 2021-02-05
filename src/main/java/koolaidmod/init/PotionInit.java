@@ -17,17 +17,18 @@ import org.jetbrains.annotations.Nullable;
 @GameRegistry.ObjectHolder(Base.MODID)
 public class PotionInit {
     public PotionInit(){super();}
-    public static final PotionType KoolAidPot = new PotionType("koolaid", new PotionEffect(Potion.getPotionById(9), 2400), new PotionEffect(Potion.getPotionById(15), 2400));
-    public static final PotionType Long_KoolAidPot = new PotionType("long_koolaid", new PotionEffect(Potion.getPotionById(9), 4800), new PotionEffect(Potion.getPotionById(15),2400);
-
+    public static final Potion KoolAid = new CustomPotion("kool_aid", true, 6316287, 0, 0);
+    public static final PotionType KoolAidPot = new PotionType("potion_koolaid", new PotionEffect(Potion.getPotionFromResourceLocation("nausea"), 4800), new PotionEffect(Potion.getPotionFromResourceLocation("wither"), 4800));
+    public static final PotionType Long_KoolAidPot = new PotionType("potion_long_koolaid", new PotionEffect(Potion.getPotionFromResourceLocation("nausea"), 8600), new PotionEffect(Potion.getPotionFromResourceLocation("wither"), 8600));
     public static void registerPotion(){
-        registerPotions(KoolAidPot, Long_KoolAidPot);
+        registerPotions(KoolAid, KoolAidPot, Long_KoolAidPot);
 
         AddMix();
     }
-    public static void registerPotions(PotionType defaultPotion, PotionType longPotion) {
-        PotionInit.KoolAidPot.setRegistryName("potion_koolaid");
-        PotionInit.Long_KoolAidPot.setRegistryName("potion_long_koolaid");
+    public static void registerPotions(Potion potion, PotionType defaultPotion, PotionType longPotion) {
+        potion.setRegistryName(Base.MODID + ":" + potion.getName());
+        defaultPotion.setRegistryName(defaultPotion.getNamePrefixed(Base.MODID));
+        longPotion.setRegistryName(longPotion.getNamePrefixed(Base.MODID));
         ForgeRegistries.POTION_TYPES.register(defaultPotion);
         ForgeRegistries.POTION_TYPES.register(longPotion);
     }

@@ -10,3 +10,6 @@ item.koolaidmod.juice_boots.name=Juice Boots
 
 #blocks
 tile.koolaidmod.test_block.name=test block
+
+#potions
+potion.koolaidmod.koolaid.name=potion of kool-aid
