@@ -10,11 +10,18 @@
             "item": "minecraft:sugar"
         },
         "L": {
-            "item": "minecraft:lapis_lazuli"
+            "item": "minecraft:dye",
+            "data": 4
         },
         "G": {
-            "item": "minecraft:potion{Potion:water}"
+            "item": "minecraft:potion",
+            "nbt": {
+                "Potion": "minecraft:water"
+            }
         }
     },
-    "result": {koolaidmod:kool_aid}
+    "result": {
+        "item": "koolaidmod:kool_aid",
+        "count": 1
+    }
 }

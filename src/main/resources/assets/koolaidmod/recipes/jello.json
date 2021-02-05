@@ -1,11 +1,12 @@
 {
-    "type": "crafting_shapeless",
+    "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
             "item": "minecraft:sugar"
         },
         {
-            "item": "minecraft:rose_red"
+            "item": "minecraft:dye",
+            "data": 1
         },
         {
             "item": "minecraft:sugar"
@@ -14,7 +15,10 @@
             "item": "minecraft:sugar"
         },
         {
-            "item": "minecraft:potion{Potion:water}"
+            "item": "minecraft:potion",
+            "nbt": {
+                "Potion": "minecraft:water"
+            }
         },
         {
             "item": "minecraft:sugar"

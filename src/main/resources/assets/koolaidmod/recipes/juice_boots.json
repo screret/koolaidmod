@@ -1,5 +1,5 @@
 {
-    "type": "crafting_shaped",
+    "type": "minecraft:crafting_shaped",
     "pattern": [
         "# #",
         "# #"
@@ -9,5 +9,8 @@
             "item": "koolaidmod:jello"
         }
     },
-    "result": {koolaidmod:juice_boots}
+    "result": {
+        "item": "koolaidmod:juice_boots",
+        "count": 1
+    }
 }
