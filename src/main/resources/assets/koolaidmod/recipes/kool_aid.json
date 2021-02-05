@@ -13,7 +13,7 @@
             "item": "minecraft:lapis_lazuli"
         },
         "G": {
-            "item": "minecraft:glass_bottle"
+            "item": "minecraft:potion{Potion:water}"
         }
     },
     "result": {koolaidmod:kool_aid}
