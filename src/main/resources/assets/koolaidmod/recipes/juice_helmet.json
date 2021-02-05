@@ -10,5 +10,8 @@
             "item": "koolaidmod:jello"
         }
     },
-    "result": {koolaidmod:juice_helmet}
+    "result": {        
+        "item": "koolaidmod:juice_helmet",
+        "count": 1
+    }
 }
