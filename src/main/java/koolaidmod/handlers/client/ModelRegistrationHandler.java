@@ -32,9 +32,6 @@ public class ModelRegistrationHandler {
     }
 
     private static void registerModel(@NotNull Item item, int meta) {
-        if (item != null)
             ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
-        else
-            throw new IllegalArgumentException("object not registered");
     }
 }
