@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.jetbrains.annotations.Nullable;
 
-//@GameRegistry.ObjectHolder(Base.MODID)
+@GameRegistry.ObjectHolder(Base.MODID)
 public class ModPotions {
     public ModPotions(){super();}
     public static final Potion KoolAid = new CustomPotion("potion_koolaid", true, 3932107, 0, 0);

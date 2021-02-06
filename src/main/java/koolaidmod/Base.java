@@ -37,9 +37,7 @@ public class Base {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        //ModPotions.registerPotion();
-        //CustomPotionItem.replaceTexture(ModItems.KOOL_AID_POTION);
-        //CustomPotionItem.replaceTexture(ModItems.LONG_KOOL_AID_POTION);
+        ModPotions.registerPotion();
     }
 
     /**

@@ -4,6 +4,7 @@ import koolaidmod.Base;
 import koolaidmod.init.ModItems;
 import koolaidmod.init.ModPotions;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,8 +18,6 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.FoodStats;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.living.PotionColorCalculationEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.Nullable;
@@ -31,7 +30,7 @@ import java.util.function.Function;
 import static java.lang.Integer.min;
 import static java.util.Objects.requireNonNull;
 
-public class ItemJuice extends Item {
+public class ItemJuice extends Item implements IItemColor {
     public ItemJuice(){
         this.setMaxStackSize(1);
         this.setCreativeTab(Base.MOD_TAB);
@@ -42,6 +41,10 @@ public class ItemJuice extends Item {
     @Override
     public EnumAction getItemUseAction(ItemStack stack) {
         return EnumAction.DRINK;
+    }
+
+    public int getMaxItemUseDuration(ItemStack p_getMaxItemUseDuration_1_) {
+        return 32;
     }
 
     @Override
@@ -78,10 +81,8 @@ public class ItemJuice extends Item {
             }
             entityPlayer.ifPresent(ep->ep.inventory.addItemStackToInventory(new ItemStack(ModItems.EMPTY_BOTTLE)));
         }
-        for (int i = 0; i <= ModPotions.KoolAidPot.getEffects().toArray().length; i++)
+        for (int i = 0; i < ModPotions.KoolAidPot.getEffects().toArray().length; i++)
             entityLiving.addPotionEffect(ModPotions.KoolAidPot.getEffects().get(i));
-
-        ModPotions.KoolAid.getLiquidColor();
 
         return stack;
     }
@@ -96,6 +97,11 @@ public class ItemJuice extends Item {
 
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack stack) {
-        return true;
+        return false;
+    }
+
+    @Override
+    public int colorMultiplier(ItemStack itemStack, int i) {
+        return ModPotions.KoolAid.getLiquidColor();
     }
 }
