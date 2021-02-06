@@ -13,4 +13,6 @@ item.koolaidmod.jello.name=Jello
 tile.koolaidmod.test_block.name=test block
 
 #potions
-potion.effect.koolaidmod.koolaid.name=potion of kool-aid
+effect.potion_koolaid.name=kool-aid
+potion.effect.potion_koolaid_item.name=kool-aid
+potion.effect.potion_long_koolaid_item.name=l o n g kool-aid

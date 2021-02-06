@@ -19,9 +19,11 @@ import java.util.Objects;
 public class ModelRegistrationHandler {
 
     @SubscribeEvent(priority = EventPriority.NORMAL)
-    public static void registerModels(@NotNull final ModelRegistryEvent event) {
+    public static void registerModels(final ModelRegistryEvent event) {
         registerModel(ModItems.KOOL_AID, 0);
         registerModel(ModItems.JELLO, 0);
+        registerModel(ModItems.EMPTY_BOTTLE, 0);
+        registerModel(ModItems.MAGIC_AID, 0);
 
         registerModel(ModItems.JUICE_HELMET, 0);
         registerModel(ModItems.JUICE_CHESTPLATE, 0);

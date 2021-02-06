@@ -3,8 +3,7 @@ package koolaidmod.handlers;
 import koolaidmod.Base;
 import koolaidmod.blocks.test_block;
 import koolaidmod.init.ModBlocks;
-import koolaidmod.init.ModItems;
-import koolaidmod.init.PotionInit;
+import koolaidmod.items.ItemJuice;
 import koolaidmod.items.armor.ModArmor;
 import koolaidmod.materials.ModMaterials;
 import koolaidmod.util.RegistryUtil;
@@ -22,7 +21,7 @@ import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 @EventBusSubscriber(modid = Base.MODID)
-public class RegistryHandler {
+public class RegistrationHandler {
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void registerBlocks(@NotNull final RegistryEvent.Register<Block> event){
@@ -38,6 +37,8 @@ public class RegistryHandler {
         final Item[] items = {
                 RegistryUtil.setItemName(new Item(), "kool_aid").setCreativeTab(Base.MOD_TAB),
                 RegistryUtil.setItemName(new Item(), "jello").setCreativeTab(Base.MOD_TAB),
+                RegistryUtil.setItemName(new Item(), "empty_bottle").setCreativeTab(Base.MOD_TAB),
+                RegistryUtil.setItemName(new ItemJuice(), "magic_aid").setCreativeTab(Base.MOD_TAB),
 
                 RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.HEAD), "juice_helmet").setCreativeTab(Base.MOD_TAB),
                 RegistryUtil.setItemName(new ModArmor(ModMaterials.JUICE_ARMOR, EntityEquipmentSlot.CHEST), "juice_chestplate").setCreativeTab(Base.MOD_TAB),

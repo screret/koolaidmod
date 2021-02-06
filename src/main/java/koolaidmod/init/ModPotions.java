@@ -14,11 +14,11 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.jetbrains.annotations.Nullable;
 
-@GameRegistry.ObjectHolder(Base.MODID)
-public class PotionInit {
-    public PotionInit(){super();}
-    public static final Potion KoolAid = new CustomPotion("potion_koolaid", true, 6316287, 0, 0);
-    public static final PotionType KoolAidPot = new PotionType("potion_koolaid_item", new PotionEffect(Potion.getPotionFromResourceLocation("nausea"), 4800), new PotionEffect(Potion.getPotionFromResourceLocation("wither"), 4800));
+//@GameRegistry.ObjectHolder(Base.MODID)
+public class ModPotions {
+    public ModPotions(){super();}
+    public static final Potion KoolAid = new CustomPotion("potion_koolaid", true, 3932107, 0, 0);
+    public static final PotionType KoolAidPot = new PotionType("potion_koolaid_item", new PotionEffect(KoolAid, 4800), new PotionEffect(Potion.getPotionFromResourceLocation("nausea"), 4800), new PotionEffect(Potion.getPotionFromResourceLocation("wither"), 4800));
     public static final PotionType Long_KoolAidPot = new PotionType("potion_long_koolaid_item", new PotionEffect(Potion.getPotionFromResourceLocation("nausea"), 8600), new PotionEffect(Potion.getPotionFromResourceLocation("wither"), 8600));
     public static void registerPotion(){
         registerPotions(KoolAid, KoolAidPot, Long_KoolAidPot);
@@ -27,9 +27,9 @@ public class PotionInit {
     }
     public static void registerPotions(Potion potion, PotionType defaultPotion, PotionType longPotion) {
         //potion.setRegistryName(Base.MODID + ":" + potion.getName());
-        defaultPotion.setRegistryName(defaultPotion.getNamePrefixed(Base.MODID));
-        longPotion.setRegistryName(longPotion.getNamePrefixed(Base.MODID));
-        //ForgeRegistries.POTIONS.register(potion);
+        defaultPotion.setRegistryName(Base.MODID + defaultPotion.getNamePrefixed("effect"));
+        longPotion.setRegistryName(Base.MODID + longPotion.getNamePrefixed("effect"));
+        ForgeRegistries.POTIONS.register(potion);
         ForgeRegistries.POTION_TYPES.register(defaultPotion);
         ForgeRegistries.POTION_TYPES.register(longPotion);
     }
